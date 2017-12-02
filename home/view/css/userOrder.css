@@ -1,0 +1,376 @@
+body{
+	font-family: 'microsoft yahei'
+}
+#login_box{
+	padding-top: 30px;
+	height: auto;
+}
+#login_box .user-header{
+	text-align: center;
+}
+#login_box .user-header img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+#login_box .user-header a{
+	display: block;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+#login_box .user-info{
+	max-width: 1060px;
+	/* height: 705px; */
+	margin:0 auto;
+}
+#login_box .user-info .user-nav{
+	width: 20%;
+	max-width: 240px;
+	height: 100%;
+	background: #fbfafa;
+	float: left;
+}
+#login_box .user-info .user-nav .user-center{
+	height: 55px;
+	padding-left: 30px;
+	font-size: 12px;
+	font-family: 'microsoft yahei';
+	line-height: 55px;
+	color: #666;
+}
+.user-nav ul{
+	list-style: none;
+	padding-left: 0px;
+	margin-bottom: 0;
+}
+.user-nav ul li a{
+	display: block;
+	padding:10px 0 10px 30px;
+	color: #666;
+	font-family: 'microsoft yahei';
+	margin-bottom: 0;
+}
+.user-nav ul li a:hover{
+	background: #eaeaea;
+}
+.user-nav .active{
+	background: #eaeaea;
+	border-left:4px solid #eb0028;
+}
+.user-nav ul li a img{
+	width: 24px;
+	height: 24px;
+	vertical-align: top;
+}
+#login_box .user-info .content-panel{
+	width: 80%;
+	float: left;
+	box-sizing: border-box;
+	padding-left: 10px;
+	/* height: 100%; */
+	background: #efefef;
+	overflow: hidden;
+}
+.content-panel .content-head{
+	width: 100%;
+	height: 60px;
+	background: #f6f6f6;
+}
+.content-panel .content-body{
+	position: relative;
+	width: 100%;
+	background: #fff;
+	/* min-height: 645px; */
+}
+.no-order{
+	display: none;
+}
+.content-panel .content-body .no-order p{
+	margin-top: 15px;
+}
+.content-panel .content-body .no-order{
+	position: absolute;
+	width: 100%;
+	height: 155px;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+	font-family: 'microsoft yahei';
+	margin:auto;
+}
+.order-num{
+	float: left;
+	height: 100%;
+	background: #fff;
+	width: 300px;
+	padding:0 20px;
+	text-align: center;
+	line-height: 60px;
+}
+.order-num:hover{
+	cursor: pointer;
+}
+.order-num>span{
+	font-size: 17px;
+}
+.order-num>img{
+	position: relative;
+	right: -5px;
+	top: -2px;
+}
+.content-head>a,
+.content-head>span{
+	float: right;	
+	margin-top: 10px;
+	margin-right: 15px;
+	width: 100px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+.good_box .good_list>ul>li{
+	height: 90px;
+}
+.good_box .good_list .good-ul li{
+	line-height: 90px;
+}
+.good_box .top_bar{
+	background: #fff;
+	height: 40px;
+}
+.good_box .top_bar li{
+	color: #333;
+	line-height: 40px;
+}
+.pay{
+	background: #eb0028;
+	color: #fff;
+}
+.pay:hover{
+	color: #fff
+}
+.cancel,
+.cancel:hover{
+	background: #ccc;
+	color: #333;
+}
+.order-state{
+	padding: 30px 0;
+	background: #fd7043;
+}
+.order-state ul{
+	width: 100%;
+	list-style: none;
+	margin-bottom: 0;
+	padding-left:0;
+	font-size: 0;
+}
+.order-state ul li{
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+}
+.order-state ul{
+	position: relative;
+}
+.order-state ul li span{
+	display: inline-block;
+	width: 70px;
+}
+.order-state .dot{
+	position: relative;
+	height: 22px;
+	margin:10px 0;
+}
+.order-state .circle-dot{
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin:auto;
+	border-radius: 50%;
+	border:3px solid rgb(218,66,0);
+	background:#fd7043;
+	z-index: 66;
+}
+.order-state .active{
+	border-color: #fff;
+	background:rgb(218,66,0);
+}
+.order-state .state-line{
+	position: absolute;
+	top: 20px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin:auto;
+	height: 1px;
+	width: 75%;
+	background: rgb(218,66,0);
+}
+.order-state .white{
+	width: 25%;
+	height: 1px;
+	margin-left: 0px;
+	left: 100px;
+	background: #fff;
+}
+.order-addr{
+	padding: 20px 30px;
+	color: #fff;
+	background: #ff8a60;
+}
+.good_box .good_list .good-ul li:nth-child(4){
+	width: 33%;
+} 
+.good_box .top_bar li{
+	width: 15.5%;
+}												
+.good_box .number{
+	border: none;
+}
+.good_box .good_list .good-ul li:nth-child(5){
+	margin-left: -15px;
+}
+.good_box .good_list .good-ul li:nth-child(5) a{
+	margin-left: -40px;
+}
+.good_box .good_list .good-ul li:nth-child(5) img{
+	width: 70px;
+	height: 70px;
+}
+.good_box .sum{
+	height: 80px;
+	line-height: 40px;
+}
+.good_box .sum p:last-child{
+	float: right;
+}
+.good_box .sum p:last-child span{
+	font-size: 26px;
+	vertical-align: bottom;
+}
+
+
+
+.addr .content-head span:first-child{
+	float: left;
+}
+.addr .content-head span:last-child{
+	width: 150px;
+	cursor: pointer;
+	padding:0 15px;
+	border:1px solid #ccc;
+}
+.active-addr-box{
+	outline:2px solid #e8736a;
+}
+
+.good_list .addr-box{
+	padding: 15px 10px;
+	text-align: left;
+	font-family: 'microsoft yahei';
+	min-height: 645px;
+}
+.good_list .addr-box .inner-box{
+	position: relative;
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	width:250px;
+	height: 220px;
+	line-height: 25px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	box-shadow: 0 0 12px #ccc;
+}
+.good_list{
+	text-align: center;
+}
+.name,.phone,.addr{
+	width: 100%;
+	padding:15px 0;
+}
+.addr{
+	padding-top: 0;
+}
+.name{
+	padding-bottom: 0;
+}
+.good_list label{
+	font-family:'microsoft yahei';
+	font-weight: normal;	
+}
+.good_list .hidd input{
+	width: 260px;
+	padding: 10px 15px;
+	border:none;
+	outline: none;
+	background: #fff;
+	font-family:'microsoft yahei';
+}
+
+.name-phone{
+	position: relative;
+	padding: 20px 20px 10px 0;
+}
+.name-phone .pho,
+.name-phone>img{
+	float: right;
+}
+.name-phone>img{
+	position: relative;
+	top: 3px;
+	right: 5px;
+}
+.default-addr{
+	position: absolute;
+	padding:10px 20px;
+	width: 100%;
+	border-top: 1px solid #dfdfdf;
+	bottom: 0;
+	color: #09c;
+	left: 0;
+}
+.default-addr>span{
+	color:#009ACD;
+	cursor: pointer;
+}
+.activeText{
+	color: #000;
+}
+.default-addr>img{
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	cursor: pointer;
+}
+.default-addr>a{
+
+}
+.good_list a{
+	display: inline-block;
+	font-family: 'microsoft yahei';
+	width: 140px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	margin-bottom: 20px;
+}
+.good_list .save{
+	background: #eb0028;
+	margin-right: 15px;
+	color: #fff;
+}
+.good_list .cancel{
+	background: #ccc;
+	color: #000;
+}
+.default-addr img:nth-last-child(2){
+	right: 50px;
+}

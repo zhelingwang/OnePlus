@@ -1,0 +1,174 @@
+ 	
+    	<!--section7 begin-->
+    	<div class="footer">
+    		<div class="footContent">
+    			<div class="footer-top clearfix">
+    				<div class="footer-left col-lg-8 col-md-8 col-sm-8 col-xs-12">    	
+    					<div class="leftContent col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    						<p id="first">
+    							一加产品
+    							<span class="font glyphicon glyphicon-chevron-down"></span>
+    							<!--<span class="font glyphicon glyphicon-chevron-up hidden"></span>-->
+    						</p>
+    						<ul class="leftDown" id="leftDown1">
+    							<li><a href="#">OnePlus 5</a></li>
+    							<li><a href="#">一加手机 3T</a></li>
+    							<li><a href="#">一加手机 3</a></li>
+    						</ul>
+    					</div>
+    					<div class="leftContent col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    						<p id="two">关于一加<span class="font glyphicon glyphicon-chevron-down"></span></p>
+    						<ul class="leftDown" id="leftDown2">
+    							<li><a href="#">了解一加</a></li>
+    							<li><a href="#">加入一加</a></li>
+    							<li><a href="#">H2OS</a></li>
+    						</ul>
+    					</div>
+    					<div class="leftContent col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    						<p id="three">服务支持<span class="font glyphicon glyphicon-chevron-down"></span></p>
+    						<ul class="leftDown" id="leftDown3">
+    							<li><a href="#">自助服务</a></li>
+    							<li><a href="#">技术支持</a></li>
+    							<li><a href="#">售后服务</a></li>
+    							<li><a href="#">一加加多保</a></li>
+    						</ul>
+    					</div>
+    				</div>	
+    				<div class="footer-right col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    					<div class="rightContent">
+    						<p><span>客服电话：</span>400-888-1111</p>
+    						<p class="pright"><span>Change location</span><a href="#"><img src="img/seciton6.2.png" class="img-responsive"/></a></p>
+    						<button type="button" class="btn-online">在线客服</button>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="footer-bottom">
+    			<div class="changbg">
+    				<div class="footContent">
+    					<p class="fifth fifth1"><img src="img/section6.4.png"/>粤公网安备 44030402000178号</p>	
+    					<span class="bottomFirst">© 2013-2017 OnePlus. All Rights Reserved. <a href="#">(粤ICP备13088308号-1) </a></span>
+						<p class="other2 clearfix">备案号：<a href="#">粤ICP备13088308号-1</a></p>
+    					<p class="fifth fifth3"><img src="img/section6.4.png"/>粤公网安备 44030402000178号</p>	
+    					<span class="secondImg img1"><a href="#"><img src="img/section6.2.png" /></a></span>
+    					<span class="fourImg fourImg1">Change location<a href="#"><img src="img/seciton6.2.png" /></a></span>
+    					<span class="secondImg img2"><a href="#"><img src="img/section6.3.png" /></a></span>
+    					<p class="other1 clearfix">备案号：<a href="#">粤ICP备13088308号-1</a></p>
+    					<p class="fifth fifth2"><img src="img/section6.4.png"/>粤公网安备 44030402000178号</p>	
+    					<div class="last clearfix"></div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<!--section7 end-->
+    	<!--section7 jQuery begin-->
+    	<script type="text/javascript">//页面尾部js
+    		$(function(){
+    			$("#first").click(function(){
+//  				console.log(0);
+    				$("#leftDown1").slideToggle(800);
+    				$("#first span").toggleClass("glyphicon-chevron-down");
+	 				$("#first span").toggleClass("glyphicon-chevron-up");
+//  				$("#first span").removeClass("glyphicon-chevron-down");
+//  				$("#first span").addClass("glyphicon-chevron-up");
+//  				$(this).children('.glyphicon-chevron-down').toggleClass('hidden');
+//  				$(this).children('.glyphicon-chevron-up').toggleClass('hidden');
+    			})
+    			$("#two").click(function(){
+    				$("#leftDown2").slideToggle(800);
+    				$("#two span").toggleClass("glyphicon-chevron-down");
+	 				$("#two span").toggleClass("glyphicon-chevron-up");
+    			})
+    			$("#three").click(function(){
+    				$("#leftDown3").slideToggle(800);
+    				$("#three span").toggleClass("glyphicon-chevron-down");
+	 				$("#three span").toggleClass("glyphicon-chevron-up");
+    			})
+    		})
+    	</script>
+    	
+    	<script type="text/javascript">//页面头部js
+    		$(".userAll").hover(function(){
+    			//ajax
+    			$.get("../api/isLoginApi.php",function(data){
+    				if(data.status==1){
+    					$(".userOptions").fadeIn(100);
+    				}
+    			},'json')
+    		},function(){
+    			$(".userOptions").fadeOut(100);
+    		})
+    		$(".userOptions li").hover(function(){
+    			$(this).css({"background":"#dcdcdc"});
+    		},function(){
+    			$(this).css({"background":"white"});
+    		})
+    	</script>
+
+
+        <script>//登录页面的js
+            var count = 0;
+            $(function(){
+
+                $(".pwd i").click(function(){
+                    count++;
+                    if(count%2 !== 0){
+                        $(this).removeClass("icon-htmal5icon08");
+                        $(this).addClass("icon-mimakejian");
+                        $(this).parent().find("input").attr("type","text");
+                    }else{
+                        $(this).removeClass("icon-mimakejian");
+                        $(this).addClass("icon-htmal5icon08");
+                        $(this).parent().find("input").attr("type","password");
+                    }
+                    
+                });
+                $("#login").click(function(){
+                    var username=$("#username").val();
+                    var password=$("#password").val();
+                    var slidercode=$("#sliderCode").val();
+                    $.post("../api/userLoginApi.php",
+                        {username:username,password:password,slidercode:slidercode},
+                        function(data){
+                        if(data.redirect!=''){
+                            window.location.href=data.redirect;
+                        }else{
+                            alert(data.msg);
+                        }
+                    },'json');
+                })
+            })  
+        </script>
+        
+        <script>//注册页面的js
+            $(function(){
+                $("#register").click(function(){
+                    var username=$("#username").val();
+                    var password=$("#password").val();
+                    var password_again=$("#password_again").val();
+                    var slidercode=$("#sliderCode").val();
+                    $.post("../api/userRegApi.php",
+                        {username:username,password:password,password_again:password_again,slidercode:slidercode},
+                        function(data){
+                        if(data.redirect!=''){
+                            window.location.href=data.redirect;
+                        }else{
+                            alert(data.msg);
+                        }
+                    },'json');
+                })
+            })  
+        </script>
+        
+        <script>//滑动验证码的js
+            $(function () {
+                var slider = new SliderUnlock("#slider",{
+                        successLabelTip : "验证通过!"   
+                    },function(){
+                        $("#sliderCode").val(1);
+                    });
+                slider.init();
+            })
+        </script>
+	</body>
+</html>
